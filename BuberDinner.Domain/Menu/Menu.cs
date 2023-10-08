@@ -29,7 +29,7 @@ public sealed class Menu : AggregateRoot<MenuId>
     public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
 
     public DateTime CreatedDateTime { get; }
-    public DateTime UpdatedDateTime { get; }
+    public DateTime UpdatedDateTime { get;}
 
     private Menu(
         MenuId menuId,
@@ -45,7 +45,7 @@ public sealed class Menu : AggregateRoot<MenuId>
         Name = name;
         Description = description;
         AverageRating = averageRating;
-        _sections = sections;
+        _sections = sections!;
         CreatedDateTime = createdDateTime;
         UpdatedDateTime = updatedDateTime;
     }
@@ -62,5 +62,11 @@ public sealed class Menu : AggregateRoot<MenuId>
             DateTime.UtcNow,
             DateTime.UtcNow);
     }
+
+#pragma warning disable CS8618
+    private Menu()
+    {
+    }
+#pragma warning restore CS8618
 }
 

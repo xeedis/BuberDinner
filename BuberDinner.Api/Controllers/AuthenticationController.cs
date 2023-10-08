@@ -1,16 +1,12 @@
 ﻿using BuberDinner.Application.Authentication.Commands.Register;
 using BuberDinner.Application.Authentication.Common;
 using BuberDinner.Application.Authentication.Queries.Login;
-using BuberDinner.Application.Common.Errors;
 using BuberDinner.Contracts.Authentication;
 using BuberDinner.Domain.Common.Errors;
 using ErrorOr;
-using FluentResults;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using OneOf;
-using System.Reflection.Metadata.Ecma335;
 
 namespace BuberDinner.Api.Controllers;
 

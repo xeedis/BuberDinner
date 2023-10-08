@@ -3,11 +3,7 @@ using BuberDinner.Domain.Common.Models;
 using BuberDinner.Domain.Dinner.ValueObjects;
 using BuberDinner.Domain.Guest.ValueObjects;
 using BuberDinner.Domain.Host.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BuberDinner.Domain.ValueObjects;
 
 namespace BuberDinner.Domain.Bill;
 
